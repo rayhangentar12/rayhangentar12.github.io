@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Saya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #1d2b75;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            height: 40px;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin-left: 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .edit-profile {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu, .menu-secondary {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li, .menu-secondary li {
+            margin-bottom: 15px;
+        }
+
+        .menu a, .menu-secondary a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .menu a.active {
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        .content {
+            width: 80%;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .content h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .content p {
+            margin: 0 0 20px;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .gender {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .gender label {
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        .btn-save {
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo">
+            <span>REGEDIT</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Transaksi.html">Transaksi</a></li>
+                <li><a href="akun">Akun</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="LOGO.png" alt="Logo" class="profile-image">
+                <p>leonavi_</p>
+                <a href="#" class="edit-profile">Ubah Profil</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="active">Profil</a></li>
+                <li><a href="#">Bank & Kartu</a></li>
+                <li><a href="#">Alamat</a></li>
+                <li><a href="#">Ubah Password</a></li>
+                <li><a href="#">Pengaturan Notifikasi</a></li>
+                <li><a href="#">Pengaturan Privasi</a></li>
+            </ul>
+            <ul class="menu-secondary">
+                <li><a href="#">Pesanan Saya</a></li>
+                <li><a href="#">Notifikasi</a></li>
+                <li><a href="#">Voucher Saya</a></li>
+                <li><a href="#">Koin Saya</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h2>Profil Saya</h2>
+            <p>Kelola informasi profil Anda untuk mengontrol, melindungi, dan mengamankan akun.</p>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="leonavi_">
+
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" value="Leonavi">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="ra*********@gmail.com">
+
+                <label for="phone">Nomor Telepon</label>
+                <input type="text" id="phone" name="phone" value="********44">
+
+                <label for="store">Nama Toko</label>
+                <input type="text" id="store" name="store" value="rayhannugraha2005">
+
+                <label>Jenis Kelamin</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" checked>
+                    <label for="male">Laki-laki</label>
+
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Perempuan</label>
+
+                    <input type="radio" id="other" name="gender">
+                    <label for="other">Lainnya</label>
+                </div>
+
+                <label for="birthdate">Tanggal Lahir</label>
+                <input type="text" id="birthdate" name="birthdate" value="**/08/19**" readonly>
+
+                <button type="submit" class="btn-save">Simpan</button>
+            </form>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Customer Service: <a href="Regedit@aplikasi.com">Regedit@aplikasi.com</a> | Telp: 0800-154-7447</p>
+    </footer>
+</body>
+</html>
